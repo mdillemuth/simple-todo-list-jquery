@@ -1,61 +1,89 @@
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
 body {
-font: normal normal 13px/16px "Open Sans", sans-serif;
-background: #dfdfdf;
+  font: normal normal 13px/16px "Open Sans", sans-serif;
+  background: #364f6b;
 }
-
-.container{
-padding: 20px;
-width: 300px;
-margin: 0 auto;
-margin-top: 40px;
-background: white;
-border-radius: 5px;}
-
+.container {
+  border-top: 4px solid #fc5185;
+  width: 300px;
+  padding: 2em;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+.container ul {
+  max-width: 100%;
+  padding: 0 2em;
+  list-style: none;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0;
+  margin-bottom: 2em;
+}
+.container li {
+  text-align: left;
+  opacity: 0.8;
+}
+.container h1 {
+  text-align: center;
+  font-size: 1.4em;
+  color: #364f6b;
+}
 form {
-display: inline-block;
+  display: inline-block;
+  max-width: 100%;
 }
-
-input{
-padding: 4px 15px 4px 5px;
+input {
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  border: 2px solid #3fc1c9;
+  background-color: #f5f5f5;
+  outline: none;
+  transition: all 200ms ease-in-out;
 }
-
-#button{
-display: inline-block;
-background-color:#fc999b;
-color:#ffffff;
-border-radius: 5px;
-text-align:center;
-margin-top:2px;
-padding: 5px 15px;
+input:focus {
+  border-color: #fc5185;
 }
-
-#button:hover{
-cursor: pointer;
-opacity: .8;}
-
-ol {padding-left: 20px;}
-
-ol li {padding: 5px;color:#000;}
-
-ol li:nth-child(even){background: #dfdfdf;}
-
-.strike{text-decoration: line-through;}
-
-li:hover{
+.button {
+  display: inline-block;
+  background-color: #fc5185;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 2px solid #fc5185;
+  padding: 0.75em 1em;
+  text-align: center;
+  margin-left: 1em;
+  transition: all 200ms ease-in-out;
+}
+.button:hover {
   cursor: pointer;
- }
-
-.delete {
-	display: none;
+  opacity: 0.8;
 }
-
+ol {
+  padding-left: 20px;
+}
+ol li {
+  padding: 5px;
+  color: #000;
+}
+ol li:nth-child(even) {
+  background: #dfdfdf;
+}
+.strike {
+  text-decoration: line-through;
+}
+li:hover {
+  cursor: pointer;
+}
+.delete {
+  display: none;
+}
 li > crossOutButton {
-	background: none;
-	border: none;
-	float: right;
-	color: #025f70;
-	font-weight: 800;
+  background: none;
+  border: none;
+  float: right;
+  color: #025f70;
+  font-weight: 800;
 }
