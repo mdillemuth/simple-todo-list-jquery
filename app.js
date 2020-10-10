@@ -49,6 +49,11 @@ function todoList() {
 
   // #4. Reordering the items:
   $("#list").sortable();
+
+  // #5. Remove all tasks
+  $("#removeAll").click((e) => {
+    $("#list").empty();
+  });
 }
 
 // Adds todo when user clicks 'Add' button
