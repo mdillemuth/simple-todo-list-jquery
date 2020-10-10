@@ -1,89 +1,132 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
 
+/* ===== GENERAL STYLES ===== */
 body {
   font: normal normal 13px/16px "Open Sans", sans-serif;
   background: #364f6b;
 }
 .container {
   border-top: 4px solid #fc5185;
-  width: 300px;
+  width: 325px;
   padding: 2em;
   margin: 0 auto;
   margin-top: 40px;
   background: #f5f5f5;
-  border-radius: 5px;
+  border-radius: 3px;
 }
-.container ul {
-  max-width: 100%;
-  padding: 0 2em;
-  list-style: none;
-  text-align: center;
-  line-height: 1.5em;
-  margin: 0;
-  margin-bottom: 2em;
-}
-.container li {
-  text-align: left;
-  opacity: 0.8;
-}
-.container h1 {
+.container__heading {
   text-align: center;
   font-size: 1.4em;
   color: #364f6b;
 }
-form {
-  display: inline-block;
+.container__subheading {
   max-width: 100%;
+  padding: 0 2em;
+  text-align: center;
+  line-height: 1.5em;
+  margin: 0;
+  margin-bottom: 1em;
 }
-input {
+.container__subheading--item {
+  margin: 0;
+  text-align: left;
+  opacity: 0.8;
+}
+
+/* ===== TODO INPUT ===== */
+.container__input {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.todo__input {
+  width: 100%;
+  margin-right: 0.5em;
+  display: inline-block;
   padding: 0.75em 1.5em;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 2px solid #3fc1c9;
   background-color: #f5f5f5;
   outline: none;
-  transition: all 200ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
-input:focus {
-  border-color: #fc5185;
+.todo__input:focus {
+  border-color: #364f6b;
 }
-.button {
+.todo__btn--add {
   display: inline-block;
   background-color: #fc5185;
-  color: #ffffff;
-  border-radius: 5px;
+  color: #f5f5f5;
+  border-radius: 3px;
   border: 2px solid #fc5185;
   padding: 0.75em 1em;
   text-align: center;
-  margin-left: 1em;
   transition: all 200ms ease-in-out;
-}
-.button:hover {
-  cursor: pointer;
   opacity: 0.8;
 }
-ol {
-  padding-left: 20px;
+.todo__btn--add:hover {
+  cursor: pointer;
+  opacity: 1;
 }
-ol li {
-  padding: 5px;
-  color: #000;
+
+/* ===== CREATED TODOS ===== */
+.todo__list {
+  max-width: 100%;
+  padding: 1em;
+  padding-right: 0;
+  margin: 0 auto;
 }
-ol li:nth-child(even) {
-  background: #dfdfdf;
+.todo__list--item {
+  max-width: 100%;
+  color: #212121;
+  padding: 0.5em 1em;
+  letter-spacing: 0.25px;
+  border-radius: 2px;
+  margin-bottom: 0.15em;
 }
-.strike {
-  text-decoration: line-through;
+.todo__list--item:nth-child(even) {
+  background-color: #364f6b22;
 }
-li:hover {
+.todo__list--item:hover {
+  font-weight: bold;
+}
+.todo__list--item:hover {
   cursor: pointer;
 }
-.delete {
-  display: none;
+
+/* ===== DONE TODOS ===== */
+.finished {
+  text-decoration: line-through;
+  font-style: italic;
 }
-li > crossOutButton {
+.todo__btn--remove {
+  font-style: normal;
+  font-size: 1.1em;
   background: none;
   border: none;
+  outline: none;
   float: right;
-  color: #025f70;
-  font-weight: 800;
+  color: #364f6b;
+  font-weight: bold;
+  cursor: pointer;
+}
+.todo__btn--remove:hover {
+  color: #fc5185;
+}
+
+/* ===== INPUT ERROR MESSAGE ===== */
+.error {
+  color: red;
+  font-style: italic;
+  margin: 0.5em 0;
+  display: none;
+}
+.error--active {
+  display: block;
+}
+.error__input {
+  border-color: red;
+}
+.error__icon {
+  margin-right: 0.5em;
 }
