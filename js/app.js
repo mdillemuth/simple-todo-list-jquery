@@ -5,7 +5,7 @@ function todoList() {
   // #1. Create new todo to add from input value
   (function addTodo() {
     let input = $("#input");
-    let inputVal = $("#input").val();
+    let inputVal = input.val();
     newTodo.append(inputVal);
 
     let todoList = $("#list");
@@ -51,7 +51,7 @@ function todoList() {
   $("#list").sortable();
 
   // #5. Remove all tasks
-  $("#removeAll").click((e) => {
+  $("#removeAll").click(() => {
     $("#list").empty();
   });
 }
