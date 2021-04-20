@@ -1,4 +1,8 @@
-# Simple To-do List
+# Simple To-Do List
+
+This is a simple bootcamp project that I completed for CareerFoundry in order to learn and practice working with jQuery.
+
+You can add some of your own tasks on the [live app demonstration](https://mdillemuth.github.io/simple-todo-list-jquery/)
 
 ## Showcase
 
